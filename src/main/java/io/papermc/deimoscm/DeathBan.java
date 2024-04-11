@@ -11,11 +11,10 @@ public class DeathBan extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule doImmediateRespawn true");
     }
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        new PostDeath(event).runTaskLaterAsynchronously(this, 2);
+        new PostDeath(event).runTaskLater(this, 2);
     }
 }
