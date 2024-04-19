@@ -15,6 +15,6 @@ public class DeathBan extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        new PostDeath(event).runTaskLater(this, 2);
+        new PostDeath(event).runTaskLater(this, 5);
     }
 }

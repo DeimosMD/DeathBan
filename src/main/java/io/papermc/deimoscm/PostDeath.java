@@ -22,9 +22,9 @@ public class PostDeath extends BukkitRunnable {
         Bukkit.getServer().broadcastMessage(
                 event.getPlayer().getName()+" died at "+event.getPlayer().getLastDeathLocation().getBlockX()+" "
                         +event.getPlayer().getLastDeathLocation().getBlockY()+" "+event.getPlayer().getLastDeathLocation().getBlockZ()
-                        +" in "+getDimension(event)+", and has been banned for 24 hours!"
+                        +" in "+getDimension(event)+", and has been banned for one hour!"
         );
-        event.getPlayer().ban("Death-Banned! Come back tomorrow.", Duration.ofHours(24), "DeathBan", true);
+        event.getPlayer().ban("Death-Banned! Come back tomorrow.", Duration.ofHours(1), "DeathBan", true);
     }
 
     private static @NotNull String getDimension(PlayerDeathEvent event) {

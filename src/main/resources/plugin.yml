@@ -1,6 +1,6 @@
 name: DeathBan
 version: 1.1.0
 main: io.papermc.deimoscm.DeathBan
-description: A plugin that bans players for 24h after they die.
+description: A plugin that bans players for one hour after they die.
 author: Deimoscm
 api-version: '1.20'
